@@ -33,17 +33,17 @@ export class KeyboardEventsPage {
     }
 
     // Action 3: Fill form details and complete copy-paste sequence exactly matching your recording
-    async FillFormAndCopyPaste(firstName, lastName, email, phone, textToFill) {
-        await this.firstNameField.fill(firstName);
+    async FillFormAndCopyPaste() {
+        await this.firstNameField.fill('Vignesh');
         await this.firstNameField.press('Tab');
         
-        await this.lastNameField.fill(lastName);
+        await this.lastNameField.fill('Angamuthu');
         await this.lastNameField.press('Tab');
         
-        await this.emailField.fill(email);
+        await this.emailField.fill('vignesh@gmail.com');
         await this.emailField.press('Tab');
         
-        await this.phoneField.fill(phone);
+        await this.phoneField.fill('8883980843');
         await this.phoneField.press('Tab'); 
         
         await this.sourceInput.press('ControlOrMeta+a');
@@ -51,6 +51,7 @@ export class KeyboardEventsPage {
         await this.sourceInput.press('Tab'); 
         
         // This matches your original final line execution cleanly
-        await this.destinationInput.fill(textToFill);
+        await this.destinationInput.press('ControlOrMeta+v')
+      
     }
 }

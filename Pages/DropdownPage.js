@@ -9,11 +9,11 @@ export class DropdownPage{
 
     // action
 
-    async dropdowns()
+    async dropdowns1()
     {
         await this.selectcourse.selectOption({index:1})
     }
-    async multiselect()
+    async multiselect1()
     {  
         await this.multiSelectCourses.selectOption(['Java', 'Python'])
     }

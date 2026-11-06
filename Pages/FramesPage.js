@@ -15,9 +15,4 @@ export class FramePage{
     }
 
 
-    async GetTotalFrameCount()
-    {
-        const totalfram = this.page.frames()
-        return totalfram.length
-    }
 }
